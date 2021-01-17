@@ -1,0 +1,15 @@
+.container {
+  margin: 20px auto;
+  max-width: 650px;
+  padding: 0 10px 30px;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .details {
+    margin-left: auto;
+  }
+}

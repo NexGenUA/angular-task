@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
+
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AppRoutingModule,
     NoopAnimationsModule,
     MatSnackBarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
