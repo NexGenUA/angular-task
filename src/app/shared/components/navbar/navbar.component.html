@@ -1,1 +1,7 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary">
+  <div class="nav-bar">
+    <span>Hello {{ userEmail }}!</span>
+    <span class="time">{{ time | date : 'HH:mm:ss' }}</span>
+    <button mat-raised-button color="accent" (click)="logout()">Sign out</button>
+  </div>
+</mat-toolbar>
