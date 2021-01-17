@@ -1,0 +1,15 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding-top: 15%;
+  margin: 0 auto;
+
+  .input-field {
+    margin-bottom: 1rem;
+  }
+
+  .submit-button {
+    height: 50px;
+  }
+}
