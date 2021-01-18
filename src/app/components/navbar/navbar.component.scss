@@ -1,0 +1,30 @@
+.navbar-container {
+  .navbar {
+    max-width: calc(100% - 50px);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .time {
+      font-size: 3rem;
+    }
+
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 5px;
+
+    .navbar {
+      max-width: initial;
+
+      .time {
+        font-size: 1.2rem;
+      }
+
+      .user-email {
+        font-size: .8rem;
+      }
+    }
+  }
+}

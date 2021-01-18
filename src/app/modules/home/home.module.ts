@@ -10,7 +10,7 @@ import { HomeRoutingModule } from './home-routing.module';
 
 import { HomeComponent } from './pages/home/home.component';
 import { PostComponent } from './pages/post/post.component';
-import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { PostsComponent } from './components/posts/posts.component';
 
 

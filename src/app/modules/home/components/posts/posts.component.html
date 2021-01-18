@@ -1,19 +1,24 @@
 <div class="container">
-  <mat-card *ngFor="let post of (posts$ | async)" class="card">
-    <mat-card-title>{{ post.title }}</mat-card-title>
-    <mat-card-content>{{ post.body }}</mat-card-content>
-    <button
-      mat-raised-button
-      color="primary"
-      class="details"
-      [routerLink]="['/home/post', post.id]">Детальнее
-    </button>
-  </mat-card>
-  <mat-paginator [length]="length"
-                 [pageSize]="pageSize"
-                 [pageSizeOptions]="pageSizeOptions"
-                 [pageIndex]="pageIndex"
-                 (page)=pageEvent($event)
-                 class="paginator">
-  </mat-paginator>
+  <ng-container *ngIf="(posts$ | async) as posts; else error">
+    <mat-card *ngFor="let post of posts" class="card">
+      <mat-card-title>{{ post.title }}</mat-card-title>
+      <mat-card-content>{{ post.body }}</mat-card-content>
+      <button
+        mat-raised-button
+        color="primary"
+        class="details"
+        [routerLink]="['/home/post', post.id]">Детальнее
+      </button>
+    </mat-card>
+    <mat-paginator [length]="length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="pageSizeOptions"
+                   [pageIndex]="pageIndex"
+                   (page)=pageEvent($event)
+                   class="paginator">
+    </mat-paginator>
+  </ng-container>
+  <ng-template #error>
+    <span>Something went wrong...</span>
+  </ng-template>
 </div>
