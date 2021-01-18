@@ -1,7 +1,8 @@
 import { ChangeDetectorRef, Component, NgZone, OnDestroy } from '@angular/core';
-import { AuthService } from '../../shared/services/auth.service';
 import { interval, Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
+
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-navbar',

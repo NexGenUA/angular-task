@@ -46,7 +46,7 @@ export class PostsComponent implements OnDestroy {
 
     this.pagination$
       .pipe(
-        debounceTime(500),
+        debounceTime(750),
         distinctUntilChanged((a, b) => JSON.stringify(a) === JSON.stringify(b))
       )
       .subscribe(query => {

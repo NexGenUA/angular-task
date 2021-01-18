@@ -1,10 +1,12 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { Subscription } from 'rxjs';
+
 import { ValidatePatterns } from '../../../../shared/validatePatterns';
 import { AuthEntity } from '../../../../shared/models/auth.model';
 import { AuthService } from '../../../../shared/services/auth.service';
-import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
 import { MessageService } from '../../../../shared/services/message.service';
 
 @Component({

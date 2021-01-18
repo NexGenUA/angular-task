@@ -1,5 +1,5 @@
 <div class="container">
-  <ng-container *ngIf="details$ | async as details; else error">
+  <ng-container *ngIf="details$ | async as details; else loading">
     <mat-card>
       <article class="post">
         <h1 class="post-title">{{ details.post.title }}</h1>
@@ -18,7 +18,7 @@
       </article>
     </mat-card>
   </ng-container>
-  <ng-template #error>
-    <span>Something went wrong...</span>
+  <ng-template #loading>
+    <span>Loading...</span>
   </ng-template>
 </div>

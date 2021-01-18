@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { ApiService } from '../../../../shared/services/api.service';
 import { concatMap, map } from 'rxjs/operators';
 import { Observable, of, zip } from 'rxjs';
+
+import { ApiService } from '../../../../shared/services/api.service';
 import { DetailsPost } from '../../../../shared/models/post.model';
 
 @Component({
@@ -11,7 +12,7 @@ import { DetailsPost } from '../../../../shared/models/post.model';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements OnInit {
+export class PostComponent {
   private readonly postId: string;
   private readonly POSTS_LIMIT = 100;
 
@@ -41,8 +42,4 @@ export class PostComponent implements OnInit {
     }
 
   }
-
-  ngOnInit(): void {
-  }
-
 }
