@@ -1,0 +1,36 @@
+.container {
+  margin: 20px auto;
+  max-width: 650px;
+  padding: 0 10px 30px;
+
+  .post-comments {
+    border-radius: 0;
+    margin: 20px 0 5px;
+
+    .comment-author {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .post-author {
+    margin-bottom: 20px;
+  }
+
+  .post-comments-title {
+    font-size: 1.3rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .post-author {
+    display: flex;
+    justify-content: flex-end;
+
+    .post-author-name {
+      margin-right: 10px;
+    }
+  }
+}

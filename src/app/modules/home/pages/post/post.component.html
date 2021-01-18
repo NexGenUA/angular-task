@@ -1,1 +1,24 @@
-<p>post works!</p>
+<div class="container">
+  <ng-container *ngIf="details$ | async as details; else error">
+    <mat-card>
+      <article class="post">
+        <h1 class="post-title">{{ details.post.title }}</h1>
+        <p class="post-text">{{ details.post.body }}</p>
+        <address class="post-author">
+          <span class="post-author-name">{{ details.user.name }}</span>
+          <a class="post-author-email" href="mailto:{{ details.user.email }}">{{ details.user.email }}</a>
+        </address>
+        <span class="post-comments-title">Comments:</span>
+        <mat-card *ngFor="let comment of details.comments" class="post-comments">
+          <address class="comment-author">
+            <a class="comment-author-email" href="mailto:{{ comment.email }}">{{ comment.email }}</a>
+          </address>
+          <p class="comment-text">{{ comment.body }}</p>
+        </mat-card>
+      </article>
+    </mat-card>
+  </ng-container>
+  <ng-template #error>
+    <span>Something went wrong...</span>
+  </ng-template>
+</div>
