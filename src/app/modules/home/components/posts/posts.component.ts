@@ -65,6 +65,8 @@ export class PostsComponent implements OnDestroy {
   pageEvent(event: PageEvent): void {
     const limit = event.pageSize;
     const start = event.pageIndex * limit;
+    this.pageSize = limit;
+    this.pageIndex = start / limit;
     this.pagination$.next({ start, limit });
   }
 

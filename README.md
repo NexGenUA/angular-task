@@ -1,6 +1,6 @@
 # Deploy
 
-## [https://angular-test-task.netlify.app/](https://angular-test-task.netlify.app/https://angular-test-task.netlify.app/)
+## [https://angular-test-task.netlify.app/](https://angular-test-task.netlify.app/)
 
 # AngularTask
 
